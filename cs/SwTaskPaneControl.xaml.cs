@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Controls;
 using Xarial.XCad.Base.Attributes;
-using Xarial.XCad.Examples.SwTaskPaneAddIn.Properties;
+using MMDevelop.DrawingAssistant.Properties;
 
 namespace MMDevelop.DrawingAssistant
 {
