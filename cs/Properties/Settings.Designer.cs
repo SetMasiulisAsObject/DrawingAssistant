@@ -8,18 +8,80 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MMDevelop.DrawingAssistant.Properties {
-    
-    
+namespace MMDevelop.DrawingAssistant.Properties
+{
+
+
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.2.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
+    {
+
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-        
-        public static Settings Default {
-            get {
+
+        public static Settings Default
+        {
+            get
+            {
                 return defaultInstance;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Template is not selected")]
+        public string LastUsedTemplate
+        {
+            get
+            {
+                return ((string)(this["LastUsedTemplate"]));
+            }
+            set
+            {
+                this["LastUsedTemplate"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public int[] ViewCoordinates
+        {
+            get
+            {
+                return ((int[])(this["ViewCoordinates"]));
+            }
+            set
+            {
+                this["ViewCoordinates"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool DoManualPlacement
+        {
+            get
+            {
+                return ((bool)(this["DoManualPlacement"]));
+            }
+            set
+            {
+                this["DoManualPlacement"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public int[] ViewMargins
+        {
+            get
+            {
+                return ((int[])(this["ViewMargins"]));
+            }
+            set
+            {
+                this["ViewMargins"] = value;
             }
         }
     }

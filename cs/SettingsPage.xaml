@@ -1,0 +1,167 @@
+﻿<Window x:Class="MMDevelop.DrawingAssistant.SettingsPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MMDevelop.DrawingAssistant" 
+        xmlns:components="clr-namespace:MMDevelop.DrawingAssistant.Components" d:DataContext="{d:DesignInstance Type=local:SettingsPage}"
+        mc:Ignorable="d"
+             Title="Settings"
+             d:DesignWidth="600" Height="450
+        ">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="16*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.ColumnSpan="2">
+            <TabControl>
+                <TabItem Header="Placement coordinates">
+
+                    <!-- #################### -->
+                    <!--    Projection view buttons    -->
+                    <!-- #################### -->
+                    <StackPanel>
+                        <CheckBox Content="Use manual placement of projected views" x:Name="DoManualPlacementBox" IsChecked="False"></CheckBox>
+                        <Canvas Margin="5">
+                            <Line Stroke="Violet" StrokeThickness="4" Height="28" Width="2"></Line>
+                        </Canvas>
+                        <TextBlock HorizontalAlignment="Center">X and Y coordinates of projected views on drawing sheet</TextBlock>
+
+                        <Grid Margin="0 0 0 10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <components:InputBox Title="Back" Grid.Column="2" x:Name="Back1Value" 
+                                                 XDimension="{Binding Path=ViewCoordinates[0]}"
+                                                 YDimension="{Binding Path=ViewCoordinates[1]}"
+                                                 TextChanged="EqualizeValues"/>
+
+                        </Grid>
+                        <Grid Margin="0 0 0 10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <components:InputBox Title="3D" Grid.Column="1"  x:Name="_3D1Value" 
+                                                 XDimension="{Binding Path=ViewCoordinates[2]}"
+                                                 YDimension="{Binding Path=ViewCoordinates[3]}"></components:InputBox>
+                            <components:InputBox Title="Top" Grid.Column="2" x:Name="TopValue" 
+                                                 XDimension="{Binding Path=ViewCoordinates[4]}"
+                                                 YDimension="{Binding Path=ViewCoordinates[5]}"></components:InputBox>
+                            <components:InputBox Title="3D" Grid.Column="3" x:Name="_3D2Value" 
+                                                 XDimension="{Binding Path=ViewCoordinates[6]}"
+                                                 YDimension="{Binding Path=ViewCoordinates[7]}"></components:InputBox>
+                        </Grid>
+                        <Grid Margin="0 0 0 10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <components:InputBox Title="Back" Grid.Column="0"  x:Name="Back2Value" 
+                                                 XDimension="{Binding Path=ViewCoordinates[8]}"
+                                                 YDimension="{Binding Path=ViewCoordinates[9]}"/>
+                            <components:InputBox Title="Left" Grid.Column="1" x:Name="LeftValue" 
+                                                 XDimension="{Binding Path=ViewCoordinates[10]}"
+                                                 YDimension="{Binding Path=ViewCoordinates[11]}"/>
+                            <components:InputBox Title="Main" Grid.Column="2" x:Name="MainValue" 
+                                                 XDimension="{Binding Path=ViewCoordinates[12]}"
+                                                 YDimension="{Binding Path=ViewCoordinates[13]}"/>
+                            <components:InputBox Title="Right" Grid.Column="3" x:Name="RightValue" 
+                                                 XDimension="{Binding Path=ViewCoordinates[14]}"
+                                                 YDimension="{Binding Path=ViewCoordinates[15]}"/>
+                            <components:InputBox Title="Back" Grid.Column="4" x:Name="Back3Value" 
+                                                 XDimension="{Binding Path=ViewCoordinates[16]}"
+                                                 YDimension="{Binding Path=ViewCoordinates[17]}"/>
+                        </Grid>
+                        <Grid Margin="0 0 0 10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <components:InputBox Title="3D" Grid.Column="1" x:Name="_3D3Value" 
+                                                 XDimension="{Binding Path=ViewCoordinates[18]}"
+                                                 YDimension="{Binding Path=ViewCoordinates[19]}"/>
+                            <components:InputBox Title="Bottom" Grid.Column="2" x:Name="BottomValue" 
+                                                 XDimension="{Binding Path=ViewCoordinates[20]}"
+                                                 YDimension="{Binding Path=ViewCoordinates[21]}"/>
+                            <components:InputBox Title="3D" Grid.Column="3" x:Name="_3D4Value" 
+                                                 XDimension="{Binding Path=ViewCoordinates[22]}"
+                                                 YDimension="{Binding Path=ViewCoordinates[23]}"/>
+                        </Grid>
+                        <Grid Margin="0 0 0 10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <components:InputBox Title="Back" Grid.Column="2"  x:Name="Back4Value" 
+                                                 XDimension="{Binding Path=ViewCoordinates[24]}"
+                                                 YDimension="{Binding Path=ViewCoordinates[25]}"/>
+                        </Grid>
+                        <Button Click="Save_Click" Content="Save" Width="150"></Button>
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="Placement margins">
+                    <StackPanel>
+                        <TextBlock>Please insert margins for view placement area</TextBlock>
+                        <Image x:Name="MarginScheme" Width="350" Source="/DrawingAssistant;component/Resources/MarginScheme.jpg" />
+                        <Grid Background="LightGray" Margin=" 150 0 150 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="2*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock  Grid.Column="0" HorizontalAlignment="Center">Left, mm</TextBlock>
+                            <TextBox  Grid.Column="1"  x:Name="MarginLeft" Text="{Binding Path=ViewMargins[0]}"></TextBox>
+                        </Grid>
+                        <Grid Background="LightGray" Margin=" 150 0 150 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="2*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock  Grid.Column="0" HorizontalAlignment="Center">Right, mm</TextBlock>
+                            <TextBox  Grid.Column="1"  x:Name="MarginRight" Text="{Binding Path=ViewMargins[1]}"></TextBox>
+                        </Grid>
+                        <Grid Background="LightGray" Margin=" 150 0 150 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="2*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock  Grid.Column="0" HorizontalAlignment="Center">Top, mm</TextBlock>
+                            <TextBox  Grid.Column="1" x:Name="MarginTop" Text="{Binding Path=ViewMargins[2]}"></TextBox>
+                        </Grid>
+                        <Grid Background="LightGray" Margin=" 150 0 150 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="2*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock  Grid.Column="0" HorizontalAlignment="Center">Bottom, mm</TextBlock>
+                            <TextBox  Grid.Column="1"  x:Name="MarginBottom" Text="{Binding Path=ViewMargins[3]}"></TextBox>
+                        </Grid>
+                        <Button Click="Save_Click" Content="Save" Width="150" Margin="0 20 0 0 "></Button>
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="Drawing templates" />
+
+            </TabControl>
+
+        </Grid>
+
+    </Grid>
+</Window>

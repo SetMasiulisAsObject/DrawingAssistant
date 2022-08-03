@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="MMDevelop.DrawingAssistant.Components.InputBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MMDevelop.DrawingAssistant.Components"
+             x:Name="root"
+             mc:Ignorable="d" 
+             Background="Aqua"
+             >
+    <Grid>
+        <StackPanel>
+            <TextBlock 
+                FontSize="10"
+                Text="{Binding Title, ElementName=root}"
+                TextAlignment="Center"
+             >
+            </TextBlock>
+            <Grid Margin="10">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <TextBox x:Name="xDim" Grid.Column="0" Margin="1" Text="{Binding XDimension, ElementName=root}" TextChanged="TextBox_TextChanged"
+                         PreviewTextInput="MyTextBox_PreviewTextInput" DataObject.Pasting="TextBox_Pasting"></TextBox>
+                <TextBox x:Name="yDim" Grid.Column="1" Margin="1" Text="{Binding YDimension, ElementName=root}" TextChanged="TextBox_TextChanged"
+                         PreviewTextInput="MyTextBox_PreviewTextInput" DataObject.Pasting="TextBox_Pasting"></TextBox>
+
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>
